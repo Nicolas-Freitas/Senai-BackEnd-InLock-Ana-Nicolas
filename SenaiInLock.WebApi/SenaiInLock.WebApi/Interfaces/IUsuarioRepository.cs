@@ -15,5 +15,7 @@ namespace SenaiInLock.WebApi.Interfaces
         void Deletar(int id);
 
         UsuarioDomain BuscarPorId (int id);
+
+        UsuarioDomain BuscarPorEmailSenha(string email, string senha);
     }
 }

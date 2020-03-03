@@ -56,6 +56,7 @@ namespace SenaiInLock.WebApi.Controllers
             return Ok(estudioBuscado);
         }
 
+        [Authorize (Roles = "1")]
         [HttpPut("{id}")]
         public IActionResult PutIdUrl(int id, EstudioDomain estudioAtualizado)
         {

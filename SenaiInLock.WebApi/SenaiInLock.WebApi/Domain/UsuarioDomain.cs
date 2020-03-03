@@ -16,5 +16,7 @@ namespace SenaiInLock.WebApi.Domain
         public int IdTipoUsuario { get; set; }
 
         public TipoUsuarioDomain TipoUsuario { get; set; }
+
+        
     }
 }

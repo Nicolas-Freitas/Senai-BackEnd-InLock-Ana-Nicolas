@@ -26,3 +26,17 @@ C:\Users\46962757875\Documents\A melhor pasta\InLock\SenaiInLock.WebApi\SenaiInL
 C:\Users\46962757875\Documents\A melhor pasta\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.RazorTargetAssemblyInfo.cache
 C:\Users\46962757875\Documents\A melhor pasta\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.dll
 C:\Users\46962757875\Documents\A melhor pasta\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.pdb
+C:\Users\45300889873\Desktop\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\bin\Debug\netcoreapp2.1\SenaiInLock.WebApi.deps.json
+C:\Users\45300889873\Desktop\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\bin\Debug\netcoreapp2.1\SenaiInLock.WebApi.runtimeconfig.json
+C:\Users\45300889873\Desktop\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\bin\Debug\netcoreapp2.1\SenaiInLock.WebApi.runtimeconfig.dev.json
+C:\Users\45300889873\Desktop\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\bin\Debug\netcoreapp2.1\SenaiInLock.WebApi.dll
+C:\Users\45300889873\Desktop\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\bin\Debug\netcoreapp2.1\SenaiInLock.WebApi.pdb
+C:\Users\45300889873\Desktop\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.csprojAssemblyReference.cache
+C:\Users\45300889873\Desktop\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.csproj.CoreCompileInputs.cache
+C:\Users\45300889873\Desktop\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.RazorAssemblyInfo.cache
+C:\Users\45300889873\Desktop\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.RazorAssemblyInfo.cs
+C:\Users\45300889873\Desktop\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.AssemblyInfoInputs.cache
+C:\Users\45300889873\Desktop\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.AssemblyInfo.cs
+C:\Users\45300889873\Desktop\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.RazorTargetAssemblyInfo.cache
+C:\Users\45300889873\Desktop\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.dll
+C:\Users\45300889873\Desktop\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.pdb

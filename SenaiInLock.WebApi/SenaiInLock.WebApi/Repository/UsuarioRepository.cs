@@ -10,7 +10,7 @@ namespace SenaiInLock.WebApi.Repository
 {
     public class UsuarioRepository : IUsuarioRepository
     {
-        private string stringConexao = "Data Source=.\\SqlExpress; initial catalog=InLock; User Id=sa;Pwd=sa@132";
+        private string stringConexao = "Data Source=DEV7\\SQLEXPRESS; initial catalog=InLock; User Id=sa;Pwd=sa@132";
 
         public UsuarioDomain BuscarPorId(int id)
         {
@@ -63,7 +63,6 @@ namespace SenaiInLock.WebApi.Repository
                 {
                     cmd.Parameters.AddWithValue("@Email", novoUsuario.Email);
                     cmd.Parameters.AddWithValue("@Senha", novoUsuario.Senha);
-                    
 
                     con.Open();
 
@@ -128,7 +127,7 @@ namespace SenaiInLock.WebApi.Repository
                                 IdTipoUsuario = Convert.ToInt32(rdr["IdTipoUsuario"]),
                                 Titulo = rdr["Titulo"].ToString()
                             }
-                            
+
                         };
 
 
@@ -139,6 +138,59 @@ namespace SenaiInLock.WebApi.Repository
 
 
             return usuario;
+        }
+
+
+        public UsuarioDomain BuscarPorEmailSenha(string email, string senha)
+        {
+            // Define a conexão passando a string
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+                // Define a query a ser executada no banco
+                string querySelect = "select IdUsuario, Email, Senha, TipoUsuario.Titulo, TipoUsuario.IdTipoUsuario from Usuario inner join TipoUsuario on Usuario.IdTipoUsuario = TipoUsuario.IdTipoUsuario where Email = @Email and Senha = @Senha";
+
+                // Define o comando passando a query e a conexão
+                using (SqlCommand cmd = new SqlCommand(querySelect, con))
+                {
+                    // Define o valor dos parâmetros
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@Senha", senha);
+
+                    // Abre a conexão com o banco
+                    con.Open();
+
+                    // Executa o comando e armazena os dados no objeto rdr
+                    SqlDataReader rdr = cmd.ExecuteReader();
+
+                    // Caso o resultado da query possua registro
+                    if (rdr.Read())
+                    {
+                        // Instancia um objeto usuario 
+                        UsuarioDomain usuario = new UsuarioDomain
+                        {
+                            // Atribui às propriedades os valores das colunas da tabela do banco
+                            IdUsuario = Convert.ToInt32(rdr["IdUsuario"])
+                            ,
+                            Email = rdr["Email"].ToString()
+                            ,
+                            IdTipoUsuario = Convert.ToInt32(rdr["IdTipoUsuario"])
+                            ,
+                            TipoUsuario = new TipoUsuarioDomain
+                            {
+                                IdTipoUsuario = Convert.ToInt32(rdr["IdTipoUsuario"])
+                                ,
+                                Titulo = rdr["Titulo"].ToString()
+                            }
+                        };
+
+                        // Retorna o usuario buscado
+                        return usuario;
+                    }
+                }
+
+                // Caso não encontre um email e senha correspondente, retorna null
+                return null;
+            }
         }
 
 
