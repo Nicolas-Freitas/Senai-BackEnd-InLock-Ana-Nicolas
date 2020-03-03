@@ -12,10 +12,8 @@ namespace SenaiInLock.WebApi.Interfaces
 
         void Cadastrar(UsuarioDomain novoUsuario);
 
-        void Atualizar(UsuarioDomain usuario);
-
         void Deletar(int id);
 
-        void BuscarPorId (int id);
+        UsuarioDomain BuscarPorId (int id);
     }
 }

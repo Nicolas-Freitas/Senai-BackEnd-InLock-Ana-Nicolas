@@ -17,6 +17,8 @@ namespace SenaiInLock.WebApi.Domain
 
         public DateTime DataLanc { get; set; }
 
+        public int IdEstudio { get; set; }
+
         public EstudioDomain Estudio { get; set; }
     }
 }

@@ -16,6 +16,6 @@ namespace SenaiInLock.WebApi.Interfaces
 
         void Deletar(int id);
 
-        void BuscarPorId(int id);
+        EstudioDomain BuscarPorId(int id);
     }
 }

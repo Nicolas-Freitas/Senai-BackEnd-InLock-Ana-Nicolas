@@ -34,9 +34,44 @@ namespace SenaiInLock.WebApi.Repository
             }
         }
 
-        public void BuscarPorId(int id)
+        public EstudioDomain BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+
+                string querySelectById = "SELECT IdEstudio, EstudioNome FROM Estudio WHERE IdEstudio = @ID";
+
+                con.Open();
+
+                SqlDataReader rdr;
+
+                using (SqlCommand cmd = new SqlCommand(querySelectById, con))
+                {
+                    
+                    cmd.Parameters.AddWithValue("@ID", id);
+
+                    
+                    rdr = cmd.ExecuteReader();
+
+                   
+                    if (rdr.Read())
+                    {
+                        
+                        EstudioDomain estudio = new EstudioDomain
+                        {
+                            
+                            IdEstudio = Convert.ToInt32(rdr["IdEstudio"]),
+                            EstudioNome = rdr["EstudioNome"].ToString()
+                        };
+
+                       
+                        return estudio;
+                    }
+
+                    
+                    return null;
+                }
+            }
         }
 
         public void Cadastrar(EstudioDomain novoEstudio)
@@ -67,10 +102,8 @@ namespace SenaiInLock.WebApi.Repository
                 {
                     cmd.Parameters.AddWithValue("@ID", id);
 
-                    // Abre a conexão com o banco de dados
                     con.Open();
 
-                    // Executa o comando
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -119,5 +152,7 @@ namespace SenaiInLock.WebApi.Repository
             
             return estudios; 
         }
+
+        
     }
 }

@@ -11,11 +11,10 @@ namespace SenaiInLock.WebApi.Interfaces
         List<JogosDomain> ListarJogos();
 
         void Cadastrar (JogosDomain novoJogo);
-
-        void Atualizar (JogosDomain jogo);
+    
 
         void Deletar (int id);
 
-        void BuscarPorId (int id);
+        JogosDomain BuscarPorId (int id);
     }
 }
