@@ -63,6 +63,7 @@ namespace SenaiInLock.WebApi.Repository
                 {
                     cmd.Parameters.AddWithValue("@Email", novoUsuario.Email);
                     cmd.Parameters.AddWithValue("@Senha", novoUsuario.Senha);
+                    
 
                     con.Open();
 
@@ -95,7 +96,7 @@ namespace SenaiInLock.WebApi.Repository
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
 
-                string querySelectAll = "SELECT IdUsuario, Email FROM Estudio";
+                string querySelectAll = "select IdUsuario, Email, TipoUsuario.Titulo, TipoUsuario.IdTipoUsuario from Usuario inner join TipoUsuario on Usuario.IdUsuario = TipoUsuario.IdTipoUsuario";
 
 
                 con.Open();
@@ -113,17 +114,25 @@ namespace SenaiInLock.WebApi.Repository
                     while (rdr.Read())
                     {
 
-                        UsuarioDomain Estudio = new UsuarioDomain
+                        UsuarioDomain usuarioDomain = new UsuarioDomain
                         {
 
                             IdUsuario = Convert.ToInt32(rdr[0]),
 
 
-                            Email = rdr["Email"].ToString()
+                            Email = rdr["Email"].ToString(),
+                            IdTipoUsuario = Convert.ToInt32(rdr["IdTipoUsuario"]),
+
+                            TipoUsuario = new TipoUsuarioDomain
+                            {
+                                IdTipoUsuario = Convert.ToInt32(rdr["IdTipoUsuario"]),
+                                Titulo = rdr["Titulo"].ToString()
+                            }
+                            
                         };
 
 
-                        usuario.Add(Estudio);
+                        usuario.Add(usuarioDomain);
                     }
                 }
             }

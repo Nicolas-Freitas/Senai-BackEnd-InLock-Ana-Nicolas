@@ -10,7 +10,7 @@ namespace SenaiInLock.WebApi.Repository
 {
     public class JogoRepository : IJogoRepository
     {
-        private string stringConexao = "Data Source=DEV7\\SQLEXPRESS; initial catalog=InLock; user Id=sa; pwd=sa@132";
+        private string stringConexao = "Data Source=DEV4\\SQLEXPRESS; initial catalog=InLock; user Id=sa; pwd=sa@132";
 
         public JogosDomain BuscarPorId(int id)
         {
@@ -18,7 +18,7 @@ namespace SenaiInLock.WebApi.Repository
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
 
-                string querySelectById = "select IdJogo, NomeJogo, Descricao, Estudio.EstudioNome,Preco, DataLanc, Estudio.IdEstudio from Jogos inner join Estudio on Jogos.IdJogo = Estudio.IdEstudio where IdJogo like @ID; ";
+                string querySelectById = "select IdJogo, NomeJogo, Descricao, Estudio.EstudioNome,Preco, DataLanc, Estudio.IdEstudio from Jogos inner join Estudio on Jogos.IdEstudio = Estudio.IdEstudio where IdJogo like @ID; ";
 
                 con.Open();
 
@@ -55,7 +55,7 @@ namespace SenaiInLock.WebApi.Repository
                                 IdEstudio = Convert.ToInt32(rdr["IdEstudio"])
 
                                 ,
-                                EstudioNome = rdr["EstydudioNome"].ToString()
+                                EstudioNome = rdr["EstudioNome"].ToString()
                             }
                         };
 
@@ -71,7 +71,7 @@ namespace SenaiInLock.WebApi.Repository
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string queryInsert = "INSERT INTO Jogos(NomeJogo, Descricao, Preco, DataLanc) VALUES (@NomeJogo, @Descricao, @Preco, @DataLanc)";
+                string queryInsert = "INSERT INTO Jogos(NomeJogo, Descricao, Preco, DataLanc, IdEstudio) VALUES (@NomeJogo, @Descricao, @Preco, @DataLanc, @IdEstudio)";
 
                 using (SqlCommand cmd = new SqlCommand(queryInsert, con))
                 {
@@ -79,7 +79,7 @@ namespace SenaiInLock.WebApi.Repository
                     cmd.Parameters.AddWithValue("@Descricao", novoJogo.Descricao);
                     cmd.Parameters.AddWithValue("@Preco", novoJogo.Preco);
                     cmd.Parameters.AddWithValue("@DataLanc", novoJogo.DataLanc);
-                    cmd.Parameters.AddWithValue("@IdEstudio", novoJogo.Estudio);
+                    cmd.Parameters.AddWithValue("@IdEstudio", novoJogo.IdEstudio);
 
                     con.Open();
 
@@ -118,7 +118,7 @@ namespace SenaiInLock.WebApi.Repository
 
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string querySelectAll = "select IdJogo, NomeJogo, Descricao, Estudio.EstudioNome,Preco, DataLanc, Estudio.IdEstudio from Jogos inner join Estudio on Jogos.IdJogo = Estudio.IdEstudio; ";
+                string querySelectAll = "select IdJogo, NomeJogo, Descricao, Estudio.EstudioNome,Preco, DataLanc, Estudio.IdEstudio from Jogos inner join Estudio on Jogos.IdEstudio = Estudio.IdEstudio; ";
 
                 con.Open();
 

@@ -7,8 +7,8 @@ namespace SenaiInLock.WebApi.Domain
 {
     public class TipoUsuarioDomain
     {
-        public int IdTipoUusario { get; set; }
+        public int IdTipoUsuario { get; set; }
 
-        public string TipoUsuario { get; set; }
+        public string Titulo { get; set; }
     }
 }

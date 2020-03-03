@@ -31,7 +31,7 @@ namespace SenaiInLock.WebApi.Controllers
         }
 
 
-        [Authorize(Roles = "Administrador")]
+        
         [HttpPost]
         public IActionResult Post(JogosDomain novoJogo)
         {
@@ -39,10 +39,10 @@ namespace SenaiInLock.WebApi.Controllers
             _jogoRepository.Cadastrar(novoJogo);
 
 
-            return Created("http://localhost:5000/api/Jogos", novoJogo);
+            return StatusCode(201);
         }
 
-        [Authorize(Roles = "Administrador")]
+       
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -72,6 +72,7 @@ namespace SenaiInLock.WebApi.Controllers
             {
                 return Ok(jogoBuscado);
             }
+
 
             return NotFound("Nenhum jogo encontrado para o identificador informado");
         }
