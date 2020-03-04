@@ -10,7 +10,7 @@ namespace SenaiInLock.WebApi.Repository
 {
     public class UsuarioRepository : IUsuarioRepository
     {
-        private string stringConexao = "Data Source=DEV7\\SQLEXPRESS; initial catalog=InLock; User Id=sa;Pwd=sa@132";
+        private string stringConexao = "Server=DESKTOP-JEVSFEK\\SQLEXPRESS;Database=InLock;Integrated Security=True;";
 
         public UsuarioDomain BuscarPorId(int id)
         {
@@ -147,7 +147,7 @@ namespace SenaiInLock.WebApi.Repository
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
                 // Define a query a ser executada no banco
-                string querySelect = "select IdUsuario, Email, Senha, TipoUsuario.Titulo, TipoUsuario.IdTipoUsuario from Usuario inner join TipoUsuario on Usuario.IdTipoUsuario = TipoUsuario.IdTipoUsuario where Email = @Email and Senha = @Senha";
+                string querySelect = "select IdUsuario, Email, Senha, TipoUsuario.Titulo, Usuario.IdTipoUsuario f   rom Usuario inner join TipoUsuario on Usuario.IdTipoUsuario = TipoUsuario.IdTipoUsuario where Email = @Email and Senha = @Senha";
 
                 // Define o comando passando a query e a conexão
                 using (SqlCommand cmd = new SqlCommand(querySelect, con))

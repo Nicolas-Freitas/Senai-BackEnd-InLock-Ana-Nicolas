@@ -31,7 +31,7 @@ namespace SenaiInLock.WebApi.Controllers
         }
 
 
-        [Authorize(Roles = "Administrador")]
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(JogosDomain novoJogo)
         {
@@ -42,7 +42,7 @@ namespace SenaiInLock.WebApi.Controllers
             return StatusCode(201);
         }
 
-        [Authorize(Roles = "Administrador")]
+        [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -75,8 +75,5 @@ namespace SenaiInLock.WebApi.Controllers
 
             return NotFound("Nenhum jogo encontrado para o identificador informado");
         }
-
-
-
     }
 }

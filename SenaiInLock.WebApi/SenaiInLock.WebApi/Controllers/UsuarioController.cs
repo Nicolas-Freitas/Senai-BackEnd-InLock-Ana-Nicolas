@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SenaiInLock.WebApi.Domain;
@@ -31,7 +32,7 @@ namespace SenaiInLock.WebApi.Controllers
             return _usuarioRepository.ListarUsuario();
         }
 
-
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(UsuarioDomain novoEstudio)
         {
@@ -55,7 +56,7 @@ namespace SenaiInLock.WebApi.Controllers
             return Ok(usuarioBuscado);
         }
 
-
+        [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
         {

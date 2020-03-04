@@ -32,7 +32,7 @@ namespace SenaiInLock.WebApi.Controllers
             return _estudioRepository.ListarEstudio();
         }
 
-          
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(EstudioDomain novoEstudio)
         {
@@ -86,6 +86,7 @@ namespace SenaiInLock.WebApi.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
         {

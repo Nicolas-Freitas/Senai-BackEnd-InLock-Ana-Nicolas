@@ -46,29 +46,15 @@ namespace SenaiInLock.WebApi.Controllers
         [HttpPost]
         public IActionResult Post(LoginViewModel login)
         {
-            // Busca o usuário pelo e-mail e senha
             UsuarioDomain usuarioBuscado = _usuarioRepository.BuscarPorEmailSenha(login.Email, login.Senha);
 
-            // Caso não encontre nenhum usuário com o e-mail e senha informados
             if (usuarioBuscado == null)
             {
-                // Retorna NotFound com uma mensagem de erro
                 return NotFound("E-mail ou senha inválidos");
             }
+        
 
-            // Caso o usuário seja encontrado, prossegue para a criação do token
-
-            /*
-                Instalar as dependências:
-
-                Criar e validar o jwt
-                System.IdentityModel.Tokens.Jwt(5.5.0 ou superior)
-
-                Integrar a parte de autenticação
-                Microsoft.AspNetCore.Authentication.JwtBearer(2.1.1 ou compatível com o .Net Core do projeto)
-            */
-
-            // Define os dados que serão fornecidos no token - Payload
+            
             var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.Email, usuarioBuscado.Email),
@@ -76,22 +62,22 @@ namespace SenaiInLock.WebApi.Controllers
                 new Claim(ClaimTypes.Role, usuarioBuscado.IdTipoUsuario.ToString())
             };
 
-            // Define a chave de acesso ao token
+            
             var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("inLock-chave-autenticacao"));
 
-            // Define as credenciais do token - Header
+            
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            // Gera o token
+            
             var token = new JwtSecurityToken(
-                issuer: "Inlock.WebApi",                // emissor do token
-                audience: "InLock.WebApi",              // destinatário do token
-                claims: claims,                          // dados definidos acima
-                expires: DateTime.Now.AddMinutes(30),    // tempo de expiração
-                signingCredentials: creds                // credenciais do token
+                issuer: "Inlock.WebApi",                
+                audience: "InLock.WebApi",              
+                claims: claims,                          
+                expires: DateTime.Now.AddMinutes(30),    
+                signingCredentials: creds               
             );
 
-            // Retorna Ok com o token
+           
             return Ok(new
             {
                 token = new JwtSecurityTokenHandler().WriteToken(token)

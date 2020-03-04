@@ -11,7 +11,7 @@ namespace SenaiInLock.WebApi.Repository
     public class EstudioRepository : IEstudioRepository
     {
 
-        private string stringConexao = "Data Source=.\\SqlExpress; initial catalog=InLock; User Id=sa;Pwd=sa@132";
+        private string stringConexao = "Server=DESKTOP-JEVSFEK\\SQLEXPRESS;Database=InLock;Integrated Security=True;"; 
         public void Atualizar(int id, EstudioDomain Estudio)
         {
             using (SqlConnection con = new SqlConnection(stringConexao))

@@ -40,3 +40,19 @@ C:\Users\45300889873\Desktop\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\De
 C:\Users\45300889873\Desktop\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.RazorTargetAssemblyInfo.cache
 C:\Users\45300889873\Desktop\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.dll
 C:\Users\45300889873\Desktop\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.pdb
+C:\Users\user\OneDrive\Documentos\Ana Laura\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\user\OneDrive\Documentos\Ana Laura\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\user\OneDrive\Documentos\Ana Laura\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\user\OneDrive\Documentos\Ana Laura\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\bin\Debug\netcoreapp2.1\SenaiInLock.WebApi.deps.json
+C:\Users\user\OneDrive\Documentos\Ana Laura\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\bin\Debug\netcoreapp2.1\SenaiInLock.WebApi.runtimeconfig.json
+C:\Users\user\OneDrive\Documentos\Ana Laura\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\bin\Debug\netcoreapp2.1\SenaiInLock.WebApi.runtimeconfig.dev.json
+C:\Users\user\OneDrive\Documentos\Ana Laura\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\bin\Debug\netcoreapp2.1\SenaiInLock.WebApi.dll
+C:\Users\user\OneDrive\Documentos\Ana Laura\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\bin\Debug\netcoreapp2.1\SenaiInLock.WebApi.pdb
+C:\Users\user\OneDrive\Documentos\Ana Laura\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.csprojAssemblyReference.cache
+C:\Users\user\OneDrive\Documentos\Ana Laura\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.RazorAssemblyInfo.cache
+C:\Users\user\OneDrive\Documentos\Ana Laura\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.RazorAssemblyInfo.cs
+C:\Users\user\OneDrive\Documentos\Ana Laura\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.AssemblyInfoInputs.cache
+C:\Users\user\OneDrive\Documentos\Ana Laura\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.AssemblyInfo.cs
+C:\Users\user\OneDrive\Documentos\Ana Laura\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.RazorTargetAssemblyInfo.cache
+C:\Users\user\OneDrive\Documentos\Ana Laura\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.dll
+C:\Users\user\OneDrive\Documentos\Ana Laura\InLock\SenaiInLock.WebApi\SenaiInLock.WebApi\obj\Debug\netcoreapp2.1\SenaiInLock.WebApi.pdb
